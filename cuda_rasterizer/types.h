@@ -62,8 +62,8 @@ namespace glm {
     };
 }
 
-typedef glm::vec<3, __half, glm::defaultp> half3_vec;
-typedef glm::vec<4, __half, glm::defaultp> half4_vec;
+//typedef glm::vec<3, __half, glm::defaultp> half3_vec;
+//typedef glm::vec<4, __half, glm::defaultp> half4_vec;
 typedef float floatp;
 typedef float2 floatp2;
 typedef float3 floatp3;
