@@ -14,7 +14,15 @@
 #include <cstdio>
 #include <tuple>
 #include <string>
-	
+#include <cuda.h>
+#include "cuda_runtime.h"
+#include "device_launch_parameters.h"
+#define GLM_FORCE_CUDA
+#include <glm/glm.hpp>
+#include "cuda_rasterizer/types.h"
+#include <cuda_fp16.h>
+#include <ATen/ATen.h>
+
 std::tuple<int, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor>
 RasterizeGaussiansCUDA(
 	const torch::Tensor& background,

@@ -23,6 +23,7 @@
 #include <fstream>
 #include <string>
 #include <functional>
+#include "cuda_rasterizer/types.h"
 
 std::function<char*(size_t N)> resizeFunctional(torch::Tensor& t) {
     auto lambda = [&t](size_t N) {
@@ -63,9 +64,9 @@ RasterizeGaussiansCUDA(
   const int W = image_width;
 
   auto int_opts = means3D.options().dtype(torch::kInt32);
-  auto float_opts = means3D.options().dtype(torch::kFloat32);
+  auto __half_opts = means3D.options().dtype(torch::kFloat32);
 
-  torch::Tensor out_color = torch::full({NUM_CHANNELS, H, W}, 0.0, float_opts);
+  torch::Tensor out_color = torch::full({NUM_CHANNELS, H, W}, 0.0, __half_opts);
   torch::Tensor radii = torch::full({P}, 0, means3D.options().dtype(torch::kInt32));
   
   torch::Device device(torch::kCUDA);

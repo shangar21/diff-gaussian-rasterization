@@ -18,6 +18,16 @@ def cpu_deep_copy_tuple(input_tuple):
     copied_tensors = [item.cpu().clone() if isinstance(item, torch.Tensor) else item for item in input_tuple]
     return tuple(copied_tensors)
 
+def change_precision(inp):
+    return inp
+    #try:
+    #    return inp.half()
+    #except:
+    #    if type(inp) is float:
+    #        return torch.tensor(inp, dtype=torch.float16)
+    #    return inp
+    
+
 def rasterize_gaussians(
     means3D,
     means2D,
@@ -58,25 +68,25 @@ class _RasterizeGaussians(torch.autograd.Function):
 
         # Restructure arguments the way that the C++ lib expects them
         args = (
-            raster_settings.bg, 
-            means3D,
-            colors_precomp,
-            opacities,
-            scales,
-            rotations,
-            raster_settings.scale_modifier,
-            cov3Ds_precomp,
-            raster_settings.viewmatrix,
-            raster_settings.projmatrix,
-            raster_settings.tanfovx,
-            raster_settings.tanfovy,
-            raster_settings.image_height,
-            raster_settings.image_width,
-            sh,
-            raster_settings.sh_degree,
-            raster_settings.campos,
-            raster_settings.prefiltered,
-            raster_settings.debug
+            change_precision(raster_settings.bg), 
+            change_precision(means3D),
+            change_precision(colors_precomp),
+            change_precision(opacities),
+            change_precision(scales),
+            change_precision(rotations),
+            change_precision(raster_settings.scale_modifier),
+            change_precision(cov3Ds_precomp),
+            change_precision(raster_settings.viewmatrix),
+            change_precision(raster_settings.projmatrix),
+            change_precision(raster_settings.tanfovx),
+            change_precision(raster_settings.tanfovy),
+            change_precision(raster_settings.image_height),
+            change_precision(raster_settings.image_width),
+            change_precision(sh),
+            change_precision(raster_settings.sh_degree),
+            change_precision(raster_settings.campos),
+            change_precision(raster_settings.prefiltered),
+            change_precision(raster_settings.debug)
         )
 
         # Invoke C++/CUDA rasterizer
@@ -106,27 +116,27 @@ class _RasterizeGaussians(torch.autograd.Function):
         colors_precomp, means3D, scales, rotations, cov3Ds_precomp, radii, sh, geomBuffer, binningBuffer, imgBuffer = ctx.saved_tensors
 
         # Restructure args as C++ method expects them
-        args = (raster_settings.bg,
-                means3D, 
-                radii, 
-                colors_precomp, 
-                scales, 
-                rotations, 
-                raster_settings.scale_modifier, 
-                cov3Ds_precomp, 
-                raster_settings.viewmatrix, 
-                raster_settings.projmatrix, 
-                raster_settings.tanfovx, 
-                raster_settings.tanfovy, 
-                grad_out_color, 
-                sh, 
-                raster_settings.sh_degree, 
-                raster_settings.campos,
-                geomBuffer,
-                num_rendered,
-                binningBuffer,
-                imgBuffer,
-                raster_settings.debug)
+        args = (change_precision(raster_settings.bg),
+                change_precision(means3D), 
+                change_precision(radii), 
+                change_precision(colors_precomp), 
+                change_precision(scales), 
+                change_precision(rotations), 
+                change_precision(raster_settings.scale_modifier), 
+                change_precision(cov3Ds_precomp), 
+                change_precision(raster_settings.viewmatrix), 
+                change_precision(raster_settings.projmatrix), 
+                change_precision(raster_settings.tanfovx), 
+                change_precision(raster_settings.tanfovy), 
+                change_precision(grad_out_color), 
+                change_precision(sh), 
+                change_precision(raster_settings.sh_degree), 
+                change_precision(raster_settings.campos),
+                change_precision(geomBuffer),
+                change_precision(num_rendered),
+                change_precision(binningBuffer),
+                change_precision(imgBuffer),
+                change_precision(raster_settings.debug))
 
         # Compute gradients for relevant tensors by invoking backward method
         if raster_settings.debug:

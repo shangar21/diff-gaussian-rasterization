@@ -17,50 +17,54 @@
 #include "device_launch_parameters.h"
 #define GLM_FORCE_CUDA
 #include <glm/glm.hpp>
+#include <ATen/ATen.h>
 
 namespace FORWARD
 {
 	// Perform initial steps for each Gaussian prior to rasterization.
+	template <typename floatp, typename floatp2, typename floatp3, typename floatp4, typename vec3p, typename vec4p>
 	void preprocess(int P, int D, int M,
-		const float* orig_points,
-		const glm::vec3* scales,
-		const float scale_modifier,
-		const glm::vec4* rotations,
-		const float* opacities,
-		const float* shs,
+		const floatp* orig_points,
+		const vec3p* scales,
+		const floatp scale_modifier,
+		const vec4p* rotations,
+		const floatp* opacities,
+		const floatp* shs,
 		bool* clamped,
-		const float* cov3D_precomp,
-		const float* colors_precomp,
-		const float* viewmatrix,
-		const float* projmatrix,
-		const glm::vec3* cam_pos,
+		const floatp* cov3D_precomp,
+		const floatp* colors_precomp,
+		const floatp* viewmatrix,
+		const floatp* projmatrix,
+		const vec3p* cam_pos,
 		const int W, int H,
-		const float focal_x, float focal_y,
-		const float tan_fovx, float tan_fovy,
+		const floatp focal_x, floatp focal_y,
+		const floatp tan_fovx, floatp tan_fovy,
 		int* radii,
-		float2* points_xy_image,
-		float* depths,
-		float* cov3Ds,
-		float* colors,
-		float4* conic_opacity,
+		floatp2* points_xy_image,
+		floatp* depths,
+		floatp* cov3Ds,
+		floatp* colors,
+		floatp4* conic_opacity,
 		const dim3 grid,
 		uint32_t* tiles_touched,
 		bool prefiltered);
 
 	// Main rasterization method.
+
+	template <typename floatp, typename floatp2, typename floatp4>
 	void render(
 		const dim3 grid, dim3 block,
 		const uint2* ranges,
 		const uint32_t* point_list,
 		int W, int H,
-		const float2* points_xy_image,
-		const float* features,
-		const float4* conic_opacity,
-		float* final_T,
+		const floatp2* points_xy_image,
+		const floatp* features,
+		const floatp4* conic_opacity,
+		floatp* final_T,
 		uint32_t* n_contrib,
-		const float* bg_color,
-		float* out_color);
-}
+		const floatp* bg_color,
+		floatp* out_color);
 
+}
 
 #endif
