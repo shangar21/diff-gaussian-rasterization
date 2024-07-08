@@ -64,18 +64,18 @@ namespace glm {
 
 //typedef glm::vec<3, __half, glm::defaultp> half3_vec;
 //typedef glm::vec<4, __half, glm::defaultp> half4_vec;
-typedef float floatp;
-typedef float2 floatp2;
-typedef float3 floatp3;
-typedef float4 floatp4;
-typedef glm::vec3 vec3p;
-typedef glm::vec4 vec4p;
-//typedef at::Half floatp;
-//typedef glm::tvec2<at::Half> floatp2;
-//typedef glm::tvec3<at::Half> floatp3;
-//typedef glm::tvec4<at::Half> floatp4;
-//typedef glm::tvec3<at::Half> vec3p;
-//typedef glm::tvec4<at::Half> vec4p;
+//typedef float floatp;
+//typedef float2 floatp2;
+//typedef float3 floatp3;
+//typedef float4 floatp4;
+//typedef glm::vec3 vec3p;
+//typedef glm::vec4 vec4p;
+typedef at::Half floatp;
+typedef glm::tvec2<at::Half> floatp2;
+typedef glm::tvec3<at::Half> floatp3;
+typedef glm::tvec4<at::Half> floatp4;
+typedef glm::tvec3<at::Half> vec3p;
+typedef glm::tvec4<at::Half> vec4p;
 
 #endif // TYPES_H
 

@@ -5,4 +5,4 @@ Traceback (most recent call last):
     from diff_gaussian_rasterization import GaussianRasterizationSettings, GaussianRasterizer
   File "/home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/diff_gaussian_rasterization/__init__.py", line 15, in <module>
     from . import _C
-ImportError: /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/diff_gaussian_rasterization/_C.cpython-311-x86_64-linux-gnu.so: undefined symbol: _ZN14CudaRasterizer10Rasterizer7forwardESt8functionIFPcmEES4_S4_iiiPKN3c104HalfEiiS8_S8_S8_S8_S8_S6_S8_S8_S8_S8_S8_S6_S6_bPS6_Pib
+ImportError: /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/diff_gaussian_rasterization/_C.cpython-311-x86_64-linux-gnu.so: undefined symbol: _Z22RasterizeGaussiansCUDARKN2at6TensorES2_S2_S2_S2_S2_N3c104HalfES2_S2_S2_S4_S4_iiS2_iS2_bb

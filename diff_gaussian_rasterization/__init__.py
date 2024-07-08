@@ -19,13 +19,13 @@ def cpu_deep_copy_tuple(input_tuple):
     return tuple(copied_tensors)
 
 def change_precision(inp):
-    return inp
-    #try:
-    #    return inp.half()
-    #except:
-    #    if type(inp) is float:
-    #        return torch.tensor(inp, dtype=torch.float16)
-    #    return inp
+    #return inp
+    try:
+        return inp.half()
+    except:
+        if type(inp) is float:
+            return torch.tensor(inp, dtype=torch.float16)
+        return inp
     
 
 def rasterize_gaussians(
