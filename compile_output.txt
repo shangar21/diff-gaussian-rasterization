@@ -1,0 +1,1726 @@
+    error: subprocess-exited-with-error
+    
+    × python setup.py develop did not run successfully.
+    │ exit code: 1
+    ╰─> [852 lines of output]
+        running develop
+        /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/setuptools/command/develop.py:40: EasyInstallDeprecationWarning: easy_install command is deprecated.
+        !!
+        
+                ********************************************************************************
+                Please avoid running ``setup.py`` and ``easy_install``.
+                Instead, use pypa/build, pypa/installer or other
+                standards-based tools.
+        
+                See https://github.com/pypa/setuptools/issues/917 for details.
+                ********************************************************************************
+        
+        !!
+          easy_install.initialize_options(self)
+        /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+        !!
+        
+                ********************************************************************************
+                Please avoid running ``setup.py`` directly.
+                Instead, use pypa/build, pypa/installer or other
+                standards-based tools.
+        
+                See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+                ********************************************************************************
+        
+        !!
+          self.initialize_options()
+        running egg_info
+        creating diff_gaussian_rasterization.egg-info
+        writing diff_gaussian_rasterization.egg-info/PKG-INFO
+        writing dependency_links to diff_gaussian_rasterization.egg-info/dependency_links.txt
+        writing top-level names to diff_gaussian_rasterization.egg-info/top_level.txt
+        writing manifest file 'diff_gaussian_rasterization.egg-info/SOURCES.txt'
+        reading manifest file 'diff_gaussian_rasterization.egg-info/SOURCES.txt'
+        adding license file 'LICENSE.md'
+        writing manifest file 'diff_gaussian_rasterization.egg-info/SOURCES.txt'
+        running build_ext
+        /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/utils/cpp_extension.py:414: UserWarning: The detected CUDA version (12.1) has a minor version mismatch with the version that was used to compile PyTorch (12.0). Most likely this shouldn't be a problem.
+          warnings.warn(CUDA_MISMATCH_WARN.format(cuda_str_version, torch.version.cuda))
+        /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/utils/cpp_extension.py:424: UserWarning: There are no g++ version bounds defined for CUDA version 12.1
+          warnings.warn(f'There are no {compiler_name} version bounds defined for CUDA version {cuda_str_version}')
+        building 'diff_gaussian_rasterization._C' extension
+        creating /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/build
+        creating /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-311
+        creating /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-311/cuda_rasterizer
+        Emitting ninja build file /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-311/build.ninja...
+        Compiling objects...
+        Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+        [1/5] /usr/local/cuda-12.1/bin/nvcc  -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/torch/csrc/api/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/TH -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/THC -I/usr/local/cuda-12.1/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/include/python3.11 -c -c /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/cuda_rasterizer/rasterizer_impl.cu -o /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-311/cuda_rasterizer/rasterizer_impl.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -I/home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/third_party/glm/ -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1017"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=1 -gencode=arch=compute_89,code=compute_89 -gencode=arch=compute_89,code=sm_89 -std=c++17
+        FAILED: /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-311/cuda_rasterizer/rasterizer_impl.o
+        /usr/local/cuda-12.1/bin/nvcc  -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/torch/csrc/api/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/TH -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/THC -I/usr/local/cuda-12.1/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/include/python3.11 -c -c /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/cuda_rasterizer/rasterizer_impl.cu -o /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-311/cuda_rasterizer/rasterizer_impl.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -I/home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/third_party/glm/ -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1017"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=1 -gencode=arch=compute_89,code=compute_89 -gencode=arch=compute_89,code=sm_89 -std=c++17
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/cuda_rasterizer/rasterizer_impl.cu:273:17: error: macro "CHECK_CUDA" passed 5 arguments, but takes just 2
+          273 |         ), debug)
+              |                 ^
+        In file included from /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/cuda_rasterizer/rasterizer_impl.cu:29:
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/cuda_rasterizer/auxiliary.h:166: note: macro "CHECK_CUDA" defined here
+          166 | #define CHECK_CUDA(A, debug) \
+              |
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/cuda_rasterizer/rasterizer_impl.cu:333:34: error: macro "CHECK_CUDA" passed 4 arguments, but takes just 2
+          333 |                 out_color), debug)
+              |                                  ^
+        In file included from /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/cuda_rasterizer/rasterizer_impl.cu:29:
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/cuda_rasterizer/auxiliary.h:166: note: macro "CHECK_CUDA" defined here
+          166 | #define CHECK_CUDA(A, debug) \
+              |
+        [2/5] /usr/local/cuda-12.1/bin/nvcc  -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/torch/csrc/api/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/TH -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/THC -I/usr/local/cuda-12.1/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/include/python3.11 -c -c /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/cuda_rasterizer/forward.cu -o /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-311/cuda_rasterizer/forward.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -I/home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/third_party/glm/ -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1017"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=1 -gencode=arch=compute_89,code=compute_89 -gencode=arch=compute_89,code=sm_89 -std=c++17
+        FAILED: /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-311/cuda_rasterizer/forward.o
+        /usr/local/cuda-12.1/bin/nvcc  -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/torch/csrc/api/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/TH -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/THC -I/usr/local/cuda-12.1/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/include/python3.11 -c -c /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/cuda_rasterizer/forward.cu -o /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-311/cuda_rasterizer/forward.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -I/home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/third_party/glm/ -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1017"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=1 -gencode=arch=compute_89,code=compute_89 -gencode=arch=compute_89,code=sm_89 -std=c++17
+        /usr/include/glm/detail/type_vec2.hpp(94): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+        
+        /usr/include/glm/detail/type_vec2.hpp(94): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_vec2.hpp(95): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_vec2.hpp(95): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_vec2.hpp(143): warning #20012-D: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_vec2.hpp(143): warning #20012-D: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_vec3.hpp(98): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_vec3.hpp(98): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_vec3.hpp(99): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_vec3.hpp(99): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_vec3.hpp(176): warning #20012-D: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_vec3.hpp(176): warning #20012-D: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_vec4.hpp(97): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_vec4.hpp(97): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_vec4.hpp(98): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_vec4.hpp(98): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_vec4.hpp(249): warning #20012-D: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_vec4.hpp(249): warning #20012-D: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_mat2x2.hpp(35): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_mat2x2.hpp(35): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_mat2x3.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_mat2x3.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_mat2x4.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_mat2x4.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_mat3x2.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_mat3x2.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_mat3x3.hpp(35): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_mat3x3.hpp(35): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_mat3x4.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_mat3x4.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_mat4x2.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_mat4x2.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_mat4x3.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_mat4x3.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_mat4x4.hpp(35): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_mat4x4.hpp(35): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_vec1.hpp(95): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_vec1.hpp(95): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_vec1.hpp(96): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_vec1.hpp(96): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_vec1.hpp(132): warning #20012-D: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_vec1.hpp(132): warning #20012-D: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/cuda_rasterizer/forward.cu(376): error: specializing function "FORWARD::render(dim3, dim3, const uint2 *, const uint32_t *, int, int, const floatp2 *, const floatp *, const floatp4 *, floatp *, uint32_t *, const floatp *, floatp *) [with floatp=float, floatp2=float2, floatp4=float4]" requires "template<>" syntax
+          void FORWARD::render(
+                        ^
+        
+        1 error detected in the compilation of "/home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/cuda_rasterizer/forward.cu".
+        [3/5] /usr/local/cuda-12.1/bin/nvcc  -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/torch/csrc/api/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/TH -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/THC -I/usr/local/cuda-12.1/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/include/python3.11 -c -c /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/cuda_rasterizer/backward.cu -o /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-311/cuda_rasterizer/backward.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -I/home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/third_party/glm/ -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1017"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=1 -gencode=arch=compute_89,code=compute_89 -gencode=arch=compute_89,code=sm_89 -std=c++17
+        /usr/include/glm/detail/type_vec2.hpp(94): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+        
+        /usr/include/glm/detail/type_vec2.hpp(94): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_vec2.hpp(95): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_vec2.hpp(95): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_vec2.hpp(143): warning #20012-D: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_vec2.hpp(143): warning #20012-D: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_vec3.hpp(98): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_vec3.hpp(98): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_vec3.hpp(99): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_vec3.hpp(99): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_vec3.hpp(176): warning #20012-D: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_vec3.hpp(176): warning #20012-D: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_vec4.hpp(97): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_vec4.hpp(97): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_vec4.hpp(98): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_vec4.hpp(98): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_vec4.hpp(249): warning #20012-D: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_vec4.hpp(249): warning #20012-D: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_mat2x2.hpp(35): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_mat2x2.hpp(35): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_mat2x3.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_mat2x3.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_mat2x4.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_mat2x4.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_mat3x2.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_mat3x2.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_mat3x3.hpp(35): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_mat3x3.hpp(35): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_mat3x4.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_mat3x4.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_mat4x2.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_mat4x2.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_mat4x3.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_mat4x3.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_mat4x4.hpp(35): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_mat4x4.hpp(35): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_vec1.hpp(95): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_vec1.hpp(95): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_vec1.hpp(96): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_vec1.hpp(96): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_vec1.hpp(132): warning #20012-D: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_vec1.hpp(132): warning #20012-D: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_vec2.hpp(94): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+        
+        /usr/include/glm/detail/type_vec2.hpp(94): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_vec2.hpp(95): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_vec2.hpp(95): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_vec2.hpp(143): warning #20012-D: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_vec2.hpp(143): warning #20012-D: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_vec3.hpp(98): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_vec3.hpp(98): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_vec3.hpp(99): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_vec3.hpp(99): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_vec3.hpp(176): warning #20012-D: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_vec3.hpp(176): warning #20012-D: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_vec4.hpp(97): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_vec4.hpp(97): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_vec4.hpp(98): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_vec4.hpp(98): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_vec4.hpp(249): warning #20012-D: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_vec4.hpp(249): warning #20012-D: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_mat2x2.hpp(35): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_mat2x2.hpp(35): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_mat2x3.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_mat2x3.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_mat2x4.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_mat2x4.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_mat3x2.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_mat3x2.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_mat3x3.hpp(35): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_mat3x3.hpp(35): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_mat3x4.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_mat3x4.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_mat4x2.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_mat4x2.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_mat4x3.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_mat4x3.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_mat4x4.hpp(35): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_mat4x4.hpp(35): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_vec1.hpp(95): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_vec1.hpp(95): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_vec1.hpp(96): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_vec1.hpp(96): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /usr/include/glm/detail/type_vec1.hpp(132): warning #20012-D: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                          ^
+        
+        /usr/include/glm/detail/type_vec1.hpp(132): warning #20012-D: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+           __attribute__((device)) __attribute__((host))
+                                                  ^
+        
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/cuda_rasterizer/auxiliary.h(151): warning #177-D: variable "p_proj" was declared but never referenced
+           float3 p_proj = { p_hom.x * p_w, p_hom.y * p_w, p_hom.z * p_w };
+                  ^
+        
+        [4/5] c++ -MMD -MF /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-311/ext.o.d -pthread -B /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/compiler_compat -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/include -fPIC -O2 -isystem /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/include -fPIC -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/torch/csrc/api/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/TH -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/THC -I/usr/local/cuda-12.1/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/include/python3.11 -c -c /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/ext.cpp -o /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-311/ext.o -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1017"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=1 -std=c++17
+        [5/5] /usr/local/cuda-12.1/bin/nvcc  -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/torch/csrc/api/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/TH -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/THC -I/usr/local/cuda-12.1/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/include/python3.11 -c -c /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu -o /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-311/rasterize_points.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -I/home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/third_party/glm/ -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1017"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=1 -gencode=arch=compute_89,code=compute_89 -gencode=arch=compute_89,code=sm_89 -std=c++17
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu: In function ‘std::tuple<int, at::Tensor, at::Tensor, at::Tensor, at::Tensor, at::Tensor> RasterizeGaussiansCUDA(const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, float, const at::Tensor&, const at::Tensor&, const at::Tensor&, float, float, int, int, const at::Tensor&, int, const at::Tensor&, bool, bool)’:
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:89:140: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+           89 |           rendered = CudaRasterizer::Rasterizer::forward(
+              |                                                                                                                                            ^
+        /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+          247 |   T * data() const {
+              | ^ ~~
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:89:186: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+           89 |           rendered = CudaRasterizer::Rasterizer::forward(
+              |                                                                                                                                                                                          ^
+        /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+          247 |   T * data() const {
+              | ^ ~~
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:89:264: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+           89 |           rendered = CudaRasterizer::Rasterizer::forward(
+              |                                                                                                                                                                                                                                                                        ^
+        /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+          247 |   T * data() const {
+              | ^ ~~
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:89:304: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+           89 |           rendered = CudaRasterizer::Rasterizer::forward(
+              |                                                                                                                                                                                                                                                                                                                ^
+        /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+          247 |   T * data() const {
+              | ^ ~~
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:89:455: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+           89 |           rendered = CudaRasterizer::Rasterizer::forward(
+              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ^
+        /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+          247 |   T * data() const {
+              | ^ ~~
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:89:498: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+           89 |           rendered = CudaRasterizer::Rasterizer::forward(
+              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ^
+        /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+          247 |   T * data() const {
+              | ^ ~~
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:89:541: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+           89 |           rendered = CudaRasterizer::Rasterizer::forward(
+              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ^
+        /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+          247 |   T * data() const {
+              | ^ ~~
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:89:580: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+           89 |           rendered = CudaRasterizer::Rasterizer::forward(
+              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^
+        /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+          247 |   T * data() const {
+              | ^ ~~
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:89:655: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+           89 |           rendered = CudaRasterizer::Rasterizer::forward(
+              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ^
+        /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+          247 |   T * data() const {
+              | ^ ~~
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:89:691: warning: ‘T* at::Tensor::data() const [with T = int]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+           89 |           rendered = CudaRasterizer::Rasterizer::forward(
+              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+        /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+          247 |   T * data() const {
+              | ^ ~~
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu: In function ‘std::tuple<at::Tensor, at::Tensor, at::Tensor, at::Tensor, at::Tensor, at::Tensor, at::Tensor, at::Tensor> RasterizeGaussiansBackwardCUDA(const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, float, const at::Tensor&, const at::Tensor&, const at::Tensor&, float, float, const at::Tensor&, const at::Tensor&, int, const at::Tensor&, const at::Tensor&, int, const at::Tensor&, const at::Tensor&, bool)’:
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:163:101: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+          163 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+              |                                                              ~~                                     ^
+        /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+          247 |   T * data() const {
+              | ^ ~~
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:163:147: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+          163 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+              |                                                                                                                                                   ^
+        /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+          247 |   T * data() const {
+              | ^ ~~
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:163:182: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+          163 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+              |                                                                                                                                                                                      ^
+        /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+          247 |   T * data() const {
+              | ^ ~~
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:163:221: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+          163 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+              |                                                                                                                                                                                                                             ^
+        /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+          247 |   T * data() const {
+              | ^ ~~
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:163:342: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+          163 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+              |                                                                                                                                                                                                                                                                                                                                                      ^
+        /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+          247 |   T * data() const {
+              | ^ ~~
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:163:385: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+          163 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+              |                                                                                                                                                                                                                                                                                                                                                                                                 ^
+        /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+          247 |   T * data() const {
+              | ^ ~~
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:163:428: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+          163 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+              |                                                                                                                                                                                                                                                                                                                                                                                                                                            ^
+        /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+          247 |   T * data() const {
+              | ^ ~~
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:163:467: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+          163 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+        /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+          247 |   T * data() const {
+              | ^ ~~
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:163:523: warning: ‘T* at::Tensor::data() const [with T = int]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+          163 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ^
+        /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+          247 |   T * data() const {
+              | ^ ~~
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:163:768: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+          163 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ^
+        /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+          247 |   T * data() const {
+              | ^ ~~
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:163:812: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+          163 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ^
+        /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+          247 |   T * data() const {
+              | ^ ~~
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:163:854: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+          163 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ^
+        /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+          247 |   T * data() const {
+              | ^ ~~
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:163:898: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+          163 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ^
+        /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+          247 |   T * data() const {
+              | ^ ~~
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:163:941: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+          163 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ^
+        /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+          247 |   T * data() const {
+              | ^ ~~
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:163:985: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+          163 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ^
+        /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+          247 |   T * data() const {
+              | ^ ~~
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:163:1027: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+          163 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+        /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+          247 |   T * data() const {
+              | ^ ~~
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:163:1066: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+          163 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ^
+        /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+          247 |   T * data() const {
+              | ^ ~~
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:163:1109: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+          163 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ^
+        /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+          247 |   T * data() const {
+              | ^ ~~
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:163:1155: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+          163 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+        /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+          247 |   T * data() const {
+              | ^ ~~
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu: In function ‘at::Tensor markVisible(at::Tensor&, at::Tensor&, at::Tensor&)’:
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:209:87: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+          209 |         CudaRasterizer::Rasterizer::markVisible(P,
+              |                                                                                       ^
+        /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+          247 |   T * data() const {
+              | ^ ~~
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:209:130: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+          209 |         CudaRasterizer::Rasterizer::markVisible(P,
+              |                                                                                                                                  ^
+        /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+          247 |   T * data() const {
+              | ^ ~~
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:209:173: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+          209 |         CudaRasterizer::Rasterizer::markVisible(P,
+              |                                                                                                                                                                             ^
+        /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+          247 |   T * data() const {
+              | ^ ~~
+        /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:209:212: warning: ‘T* at::Tensor::data() const [with T = bool]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+          209 |         CudaRasterizer::Rasterizer::markVisible(P,
+              |                                                                                                                                                                                                                    ^
+        /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+          247 |   T * data() const {
+              | ^ ~~
+        ninja: build stopped: subcommand failed.
+        Traceback (most recent call last):
+          File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/utils/cpp_extension.py", line 2100, in _run_ninja_build
+            subprocess.run(
+          File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/subprocess.py", line 571, in run
+            raise CalledProcessError(retcode, process.args,
+        subprocess.CalledProcessError: Command '['ninja', '-v']' returned non-zero exit status 1.
+        
+        The above exception was the direct cause of the following exception:
+        
+        Traceback (most recent call last):
+          File "<string>", line 2, in <module>
+          File "<pip-setuptools-caller>", line 34, in <module>
+          File "/home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/setup.py", line 17, in <module>
+            setup(
+          File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/setuptools/__init__.py", line 103, in setup
+            return distutils.core.setup(**attrs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/setuptools/_distutils/core.py", line 185, in setup
+            return run_commands(dist)
+                   ^^^^^^^^^^^^^^^^^^
+          File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/setuptools/_distutils/core.py", line 201, in run_commands
+            dist.run_commands()
+          File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/setuptools/_distutils/dist.py", line 969, in run_commands
+            self.run_command(cmd)
+          File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/setuptools/dist.py", line 989, in run_command
+            super().run_command(command)
+          File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/setuptools/_distutils/dist.py", line 988, in run_command
+            cmd_obj.run()
+          File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/setuptools/command/develop.py", line 34, in run
+            self.install_for_development()
+          File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/setuptools/command/develop.py", line 109, in install_for_development
+            self.run_command('build_ext')
+          File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/setuptools/_distutils/cmd.py", line 318, in run_command
+            self.distribution.run_command(command)
+          File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/setuptools/dist.py", line 989, in run_command
+            super().run_command(command)
+          File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/setuptools/_distutils/dist.py", line 988, in run_command
+            cmd_obj.run()
+          File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/setuptools/command/build_ext.py", line 88, in run
+            _build_ext.run(self)
+          File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/setuptools/_distutils/command/build_ext.py", line 345, in run
+            self.build_extensions()
+          File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/utils/cpp_extension.py", line 873, in build_extensions
+            build_ext.build_extensions(self)
+          File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/setuptools/_distutils/command/build_ext.py", line 467, in build_extensions
+            self._build_extensions_serial()
+          File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/setuptools/_distutils/command/build_ext.py", line 493, in _build_extensions_serial
+            self.build_extension(ext)
+          File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/setuptools/command/build_ext.py", line 249, in build_extension
+            _build_ext.build_extension(self, ext)
+          File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/setuptools/_distutils/command/build_ext.py", line 548, in build_extension
+            objects = self.compiler.compile(
+                      ^^^^^^^^^^^^^^^^^^^^^^
+          File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/utils/cpp_extension.py", line 686, in unix_wrap_ninja_compile
+            _write_ninja_file_and_compile_objects(
+          File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/utils/cpp_extension.py", line 1774, in _write_ninja_file_and_compile_objects
+            _run_ninja_build(
+          File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/utils/cpp_extension.py", line 2116, in _run_ninja_build
+            raise RuntimeError(message) from e
+        RuntimeError: Error compiling objects for extension
+        [end of output]
+    
+    note: This error originates from a subprocess, and is likely not a problem with pip.
+error: subprocess-exited-with-error
+
+× python setup.py develop did not run successfully.
+│ exit code: 1
+╰─> [852 lines of output]
+    running develop
+    /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/setuptools/command/develop.py:40: EasyInstallDeprecationWarning: easy_install command is deprecated.
+    !!
+    
+            ********************************************************************************
+            Please avoid running ``setup.py`` and ``easy_install``.
+            Instead, use pypa/build, pypa/installer or other
+            standards-based tools.
+    
+            See https://github.com/pypa/setuptools/issues/917 for details.
+            ********************************************************************************
+    
+    !!
+      easy_install.initialize_options(self)
+    /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+    !!
+    
+            ********************************************************************************
+            Please avoid running ``setup.py`` directly.
+            Instead, use pypa/build, pypa/installer or other
+            standards-based tools.
+    
+            See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+            ********************************************************************************
+    
+    !!
+      self.initialize_options()
+    running egg_info
+    creating diff_gaussian_rasterization.egg-info
+    writing diff_gaussian_rasterization.egg-info/PKG-INFO
+    writing dependency_links to diff_gaussian_rasterization.egg-info/dependency_links.txt
+    writing top-level names to diff_gaussian_rasterization.egg-info/top_level.txt
+    writing manifest file 'diff_gaussian_rasterization.egg-info/SOURCES.txt'
+    reading manifest file 'diff_gaussian_rasterization.egg-info/SOURCES.txt'
+    adding license file 'LICENSE.md'
+    writing manifest file 'diff_gaussian_rasterization.egg-info/SOURCES.txt'
+    running build_ext
+    /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/utils/cpp_extension.py:414: UserWarning: The detected CUDA version (12.1) has a minor version mismatch with the version that was used to compile PyTorch (12.0). Most likely this shouldn't be a problem.
+      warnings.warn(CUDA_MISMATCH_WARN.format(cuda_str_version, torch.version.cuda))
+    /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/utils/cpp_extension.py:424: UserWarning: There are no g++ version bounds defined for CUDA version 12.1
+      warnings.warn(f'There are no {compiler_name} version bounds defined for CUDA version {cuda_str_version}')
+    building 'diff_gaussian_rasterization._C' extension
+    creating /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/build
+    creating /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-311
+    creating /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-311/cuda_rasterizer
+    Emitting ninja build file /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-311/build.ninja...
+    Compiling objects...
+    Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+    [1/5] /usr/local/cuda-12.1/bin/nvcc  -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/torch/csrc/api/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/TH -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/THC -I/usr/local/cuda-12.1/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/include/python3.11 -c -c /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/cuda_rasterizer/rasterizer_impl.cu -o /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-311/cuda_rasterizer/rasterizer_impl.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -I/home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/third_party/glm/ -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1017"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=1 -gencode=arch=compute_89,code=compute_89 -gencode=arch=compute_89,code=sm_89 -std=c++17
+    FAILED: /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-311/cuda_rasterizer/rasterizer_impl.o
+    /usr/local/cuda-12.1/bin/nvcc  -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/torch/csrc/api/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/TH -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/THC -I/usr/local/cuda-12.1/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/include/python3.11 -c -c /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/cuda_rasterizer/rasterizer_impl.cu -o /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-311/cuda_rasterizer/rasterizer_impl.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -I/home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/third_party/glm/ -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1017"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=1 -gencode=arch=compute_89,code=compute_89 -gencode=arch=compute_89,code=sm_89 -std=c++17
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/cuda_rasterizer/rasterizer_impl.cu:273:17: error: macro "CHECK_CUDA" passed 5 arguments, but takes just 2
+      273 |         ), debug)
+          |                 ^
+    In file included from /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/cuda_rasterizer/rasterizer_impl.cu:29:
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/cuda_rasterizer/auxiliary.h:166: note: macro "CHECK_CUDA" defined here
+      166 | #define CHECK_CUDA(A, debug) \
+          |
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/cuda_rasterizer/rasterizer_impl.cu:333:34: error: macro "CHECK_CUDA" passed 4 arguments, but takes just 2
+      333 |                 out_color), debug)
+          |                                  ^
+    In file included from /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/cuda_rasterizer/rasterizer_impl.cu:29:
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/cuda_rasterizer/auxiliary.h:166: note: macro "CHECK_CUDA" defined here
+      166 | #define CHECK_CUDA(A, debug) \
+          |
+    [2/5] /usr/local/cuda-12.1/bin/nvcc  -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/torch/csrc/api/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/TH -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/THC -I/usr/local/cuda-12.1/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/include/python3.11 -c -c /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/cuda_rasterizer/forward.cu -o /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-311/cuda_rasterizer/forward.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -I/home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/third_party/glm/ -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1017"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=1 -gencode=arch=compute_89,code=compute_89 -gencode=arch=compute_89,code=sm_89 -std=c++17
+    FAILED: /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-311/cuda_rasterizer/forward.o
+    /usr/local/cuda-12.1/bin/nvcc  -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/torch/csrc/api/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/TH -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/THC -I/usr/local/cuda-12.1/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/include/python3.11 -c -c /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/cuda_rasterizer/forward.cu -o /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-311/cuda_rasterizer/forward.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -I/home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/third_party/glm/ -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1017"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=1 -gencode=arch=compute_89,code=compute_89 -gencode=arch=compute_89,code=sm_89 -std=c++17
+    /usr/include/glm/detail/type_vec2.hpp(94): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+    
+    /usr/include/glm/detail/type_vec2.hpp(94): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_vec2.hpp(95): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_vec2.hpp(95): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_vec2.hpp(143): warning #20012-D: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_vec2.hpp(143): warning #20012-D: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_vec3.hpp(98): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_vec3.hpp(98): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_vec3.hpp(99): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_vec3.hpp(99): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_vec3.hpp(176): warning #20012-D: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_vec3.hpp(176): warning #20012-D: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_vec4.hpp(97): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_vec4.hpp(97): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_vec4.hpp(98): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_vec4.hpp(98): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_vec4.hpp(249): warning #20012-D: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_vec4.hpp(249): warning #20012-D: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_mat2x2.hpp(35): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_mat2x2.hpp(35): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_mat2x3.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_mat2x3.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_mat2x4.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_mat2x4.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_mat3x2.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_mat3x2.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_mat3x3.hpp(35): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_mat3x3.hpp(35): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_mat3x4.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_mat3x4.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_mat4x2.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_mat4x2.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_mat4x3.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_mat4x3.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_mat4x4.hpp(35): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_mat4x4.hpp(35): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_vec1.hpp(95): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_vec1.hpp(95): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_vec1.hpp(96): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_vec1.hpp(96): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_vec1.hpp(132): warning #20012-D: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_vec1.hpp(132): warning #20012-D: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/cuda_rasterizer/forward.cu(376): error: specializing function "FORWARD::render(dim3, dim3, const uint2 *, const uint32_t *, int, int, const floatp2 *, const floatp *, const floatp4 *, floatp *, uint32_t *, const floatp *, floatp *) [with floatp=float, floatp2=float2, floatp4=float4]" requires "template<>" syntax
+      void FORWARD::render(
+                    ^
+    
+    1 error detected in the compilation of "/home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/cuda_rasterizer/forward.cu".
+    [3/5] /usr/local/cuda-12.1/bin/nvcc  -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/torch/csrc/api/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/TH -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/THC -I/usr/local/cuda-12.1/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/include/python3.11 -c -c /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/cuda_rasterizer/backward.cu -o /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-311/cuda_rasterizer/backward.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -I/home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/third_party/glm/ -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1017"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=1 -gencode=arch=compute_89,code=compute_89 -gencode=arch=compute_89,code=sm_89 -std=c++17
+    /usr/include/glm/detail/type_vec2.hpp(94): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+    
+    /usr/include/glm/detail/type_vec2.hpp(94): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_vec2.hpp(95): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_vec2.hpp(95): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_vec2.hpp(143): warning #20012-D: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_vec2.hpp(143): warning #20012-D: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_vec3.hpp(98): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_vec3.hpp(98): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_vec3.hpp(99): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_vec3.hpp(99): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_vec3.hpp(176): warning #20012-D: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_vec3.hpp(176): warning #20012-D: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_vec4.hpp(97): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_vec4.hpp(97): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_vec4.hpp(98): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_vec4.hpp(98): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_vec4.hpp(249): warning #20012-D: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_vec4.hpp(249): warning #20012-D: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_mat2x2.hpp(35): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_mat2x2.hpp(35): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_mat2x3.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_mat2x3.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_mat2x4.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_mat2x4.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_mat3x2.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_mat3x2.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_mat3x3.hpp(35): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_mat3x3.hpp(35): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_mat3x4.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_mat3x4.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_mat4x2.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_mat4x2.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_mat4x3.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_mat4x3.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_mat4x4.hpp(35): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_mat4x4.hpp(35): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_vec1.hpp(95): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_vec1.hpp(95): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_vec1.hpp(96): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_vec1.hpp(96): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_vec1.hpp(132): warning #20012-D: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_vec1.hpp(132): warning #20012-D: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_vec2.hpp(94): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+    
+    /usr/include/glm/detail/type_vec2.hpp(94): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_vec2.hpp(95): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_vec2.hpp(95): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_vec2.hpp(143): warning #20012-D: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_vec2.hpp(143): warning #20012-D: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_vec3.hpp(98): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_vec3.hpp(98): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_vec3.hpp(99): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_vec3.hpp(99): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_vec3.hpp(176): warning #20012-D: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_vec3.hpp(176): warning #20012-D: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_vec4.hpp(97): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_vec4.hpp(97): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_vec4.hpp(98): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_vec4.hpp(98): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_vec4.hpp(249): warning #20012-D: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_vec4.hpp(249): warning #20012-D: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_mat2x2.hpp(35): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_mat2x2.hpp(35): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_mat2x3.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_mat2x3.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_mat2x4.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_mat2x4.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_mat3x2.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_mat3x2.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_mat3x3.hpp(35): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_mat3x3.hpp(35): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_mat3x4.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_mat3x4.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_mat4x2.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_mat4x2.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_mat4x3.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_mat4x3.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_mat4x4.hpp(35): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_mat4x4.hpp(35): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_vec1.hpp(95): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_vec1.hpp(95): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_vec1.hpp(96): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_vec1.hpp(96): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /usr/include/glm/detail/type_vec1.hpp(132): warning #20012-D: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                      ^
+    
+    /usr/include/glm/detail/type_vec1.hpp(132): warning #20012-D: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
+       __attribute__((device)) __attribute__((host))
+                                              ^
+    
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/cuda_rasterizer/auxiliary.h(151): warning #177-D: variable "p_proj" was declared but never referenced
+       float3 p_proj = { p_hom.x * p_w, p_hom.y * p_w, p_hom.z * p_w };
+              ^
+    
+    [4/5] c++ -MMD -MF /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-311/ext.o.d -pthread -B /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/compiler_compat -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/include -fPIC -O2 -isystem /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/include -fPIC -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/torch/csrc/api/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/TH -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/THC -I/usr/local/cuda-12.1/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/include/python3.11 -c -c /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/ext.cpp -o /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-311/ext.o -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1017"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=1 -std=c++17
+    [5/5] /usr/local/cuda-12.1/bin/nvcc  -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/torch/csrc/api/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/TH -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/THC -I/usr/local/cuda-12.1/include -I/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/include/python3.11 -c -c /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu -o /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-311/rasterize_points.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -I/home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/third_party/glm/ -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1017"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=1 -gencode=arch=compute_89,code=compute_89 -gencode=arch=compute_89,code=sm_89 -std=c++17
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu: In function ‘std::tuple<int, at::Tensor, at::Tensor, at::Tensor, at::Tensor, at::Tensor> RasterizeGaussiansCUDA(const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, float, const at::Tensor&, const at::Tensor&, const at::Tensor&, float, float, int, int, const at::Tensor&, int, const at::Tensor&, bool, bool)’:
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:89:140: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+       89 |           rendered = CudaRasterizer::Rasterizer::forward(
+          |                                                                                                                                            ^
+    /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+      247 |   T * data() const {
+          | ^ ~~
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:89:186: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+       89 |           rendered = CudaRasterizer::Rasterizer::forward(
+          |                                                                                                                                                                                          ^
+    /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+      247 |   T * data() const {
+          | ^ ~~
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:89:264: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+       89 |           rendered = CudaRasterizer::Rasterizer::forward(
+          |                                                                                                                                                                                                                                                                        ^
+    /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+      247 |   T * data() const {
+          | ^ ~~
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:89:304: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+       89 |           rendered = CudaRasterizer::Rasterizer::forward(
+          |                                                                                                                                                                                                                                                                                                                ^
+    /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+      247 |   T * data() const {
+          | ^ ~~
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:89:455: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+       89 |           rendered = CudaRasterizer::Rasterizer::forward(
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ^
+    /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+      247 |   T * data() const {
+          | ^ ~~
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:89:498: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+       89 |           rendered = CudaRasterizer::Rasterizer::forward(
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ^
+    /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+      247 |   T * data() const {
+          | ^ ~~
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:89:541: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+       89 |           rendered = CudaRasterizer::Rasterizer::forward(
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ^
+    /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+      247 |   T * data() const {
+          | ^ ~~
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:89:580: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+       89 |           rendered = CudaRasterizer::Rasterizer::forward(
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^
+    /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+      247 |   T * data() const {
+          | ^ ~~
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:89:655: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+       89 |           rendered = CudaRasterizer::Rasterizer::forward(
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ^
+    /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+      247 |   T * data() const {
+          | ^ ~~
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:89:691: warning: ‘T* at::Tensor::data() const [with T = int]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+       89 |           rendered = CudaRasterizer::Rasterizer::forward(
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+    /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+      247 |   T * data() const {
+          | ^ ~~
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu: In function ‘std::tuple<at::Tensor, at::Tensor, at::Tensor, at::Tensor, at::Tensor, at::Tensor, at::Tensor, at::Tensor> RasterizeGaussiansBackwardCUDA(const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, float, const at::Tensor&, const at::Tensor&, const at::Tensor&, float, float, const at::Tensor&, const at::Tensor&, int, const at::Tensor&, const at::Tensor&, int, const at::Tensor&, const at::Tensor&, bool)’:
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:163:101: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      163 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                              ~~                                     ^
+    /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+      247 |   T * data() const {
+          | ^ ~~
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:163:147: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      163 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                                                                                                                   ^
+    /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+      247 |   T * data() const {
+          | ^ ~~
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:163:182: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      163 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                                                                                                                                                      ^
+    /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+      247 |   T * data() const {
+          | ^ ~~
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:163:221: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      163 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                                                                                                                                                                                             ^
+    /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+      247 |   T * data() const {
+          | ^ ~~
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:163:342: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      163 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                                                                                                                                                                                                                                                                                                                      ^
+    /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+      247 |   T * data() const {
+          | ^ ~~
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:163:385: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      163 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                                                                                                                                                                                                                                                                                                                                                                 ^
+    /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+      247 |   T * data() const {
+          | ^ ~~
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:163:428: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      163 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                            ^
+    /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+      247 |   T * data() const {
+          | ^ ~~
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:163:467: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      163 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+    /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+      247 |   T * data() const {
+          | ^ ~~
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:163:523: warning: ‘T* at::Tensor::data() const [with T = int]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      163 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ^
+    /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+      247 |   T * data() const {
+          | ^ ~~
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:163:768: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      163 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ^
+    /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+      247 |   T * data() const {
+          | ^ ~~
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:163:812: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      163 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ^
+    /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+      247 |   T * data() const {
+          | ^ ~~
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:163:854: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      163 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ^
+    /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+      247 |   T * data() const {
+          | ^ ~~
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:163:898: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      163 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ^
+    /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+      247 |   T * data() const {
+          | ^ ~~
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:163:941: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      163 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ^
+    /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+      247 |   T * data() const {
+          | ^ ~~
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:163:985: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      163 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ^
+    /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+      247 |   T * data() const {
+          | ^ ~~
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:163:1027: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      163 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+    /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+      247 |   T * data() const {
+          | ^ ~~
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:163:1066: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      163 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ^
+    /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+      247 |   T * data() const {
+          | ^ ~~
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:163:1109: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      163 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ^
+    /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+      247 |   T * data() const {
+          | ^ ~~
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:163:1155: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      163 |           CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+    /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+      247 |   T * data() const {
+          | ^ ~~
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu: In function ‘at::Tensor markVisible(at::Tensor&, at::Tensor&, at::Tensor&)’:
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:209:87: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      209 |         CudaRasterizer::Rasterizer::markVisible(P,
+          |                                                                                       ^
+    /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+      247 |   T * data() const {
+          | ^ ~~
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:209:130: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      209 |         CudaRasterizer::Rasterizer::markVisible(P,
+          |                                                                                                                                  ^
+    /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+      247 |   T * data() const {
+          | ^ ~~
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:209:173: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      209 |         CudaRasterizer::Rasterizer::markVisible(P,
+          |                                                                                                                                                                             ^
+    /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+      247 |   T * data() const {
+          | ^ ~~
+    /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/rasterize_points.cu:209:212: warning: ‘T* at::Tensor::data() const [with T = bool]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      209 |         CudaRasterizer::Rasterizer::markVisible(P,
+          |                                                                                                                                                                                                                    ^
+    /home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/include/ATen/core/TensorBody.h:247:1: note: declared here
+      247 |   T * data() const {
+          | ^ ~~
+    ninja: build stopped: subcommand failed.
+    Traceback (most recent call last):
+      File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/utils/cpp_extension.py", line 2100, in _run_ninja_build
+        subprocess.run(
+      File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/subprocess.py", line 571, in run
+        raise CalledProcessError(retcode, process.args,
+    subprocess.CalledProcessError: Command '['ninja', '-v']' returned non-zero exit status 1.
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "<string>", line 2, in <module>
+      File "<pip-setuptools-caller>", line 34, in <module>
+      File "/home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/setup.py", line 17, in <module>
+        setup(
+      File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/setuptools/__init__.py", line 103, in setup
+        return distutils.core.setup(**attrs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/setuptools/_distutils/core.py", line 185, in setup
+        return run_commands(dist)
+               ^^^^^^^^^^^^^^^^^^
+      File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/setuptools/_distutils/core.py", line 201, in run_commands
+        dist.run_commands()
+      File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/setuptools/_distutils/dist.py", line 969, in run_commands
+        self.run_command(cmd)
+      File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/setuptools/dist.py", line 989, in run_command
+        super().run_command(command)
+      File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/setuptools/_distutils/dist.py", line 988, in run_command
+        cmd_obj.run()
+      File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/setuptools/command/develop.py", line 34, in run
+        self.install_for_development()
+      File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/setuptools/command/develop.py", line 109, in install_for_development
+        self.run_command('build_ext')
+      File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/setuptools/_distutils/cmd.py", line 318, in run_command
+        self.distribution.run_command(command)
+      File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/setuptools/dist.py", line 989, in run_command
+        super().run_command(command)
+      File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/setuptools/_distutils/dist.py", line 988, in run_command
+        cmd_obj.run()
+      File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/setuptools/command/build_ext.py", line 88, in run
+        _build_ext.run(self)
+      File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/setuptools/_distutils/command/build_ext.py", line 345, in run
+        self.build_extensions()
+      File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/utils/cpp_extension.py", line 873, in build_extensions
+        build_ext.build_extensions(self)
+      File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/setuptools/_distutils/command/build_ext.py", line 467, in build_extensions
+        self._build_extensions_serial()
+      File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/setuptools/_distutils/command/build_ext.py", line 493, in _build_extensions_serial
+        self.build_extension(ext)
+      File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/setuptools/command/build_ext.py", line 249, in build_extension
+        _build_ext.build_extension(self, ext)
+      File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/setuptools/_distutils/command/build_ext.py", line 548, in build_extension
+        objects = self.compiler.compile(
+                  ^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/utils/cpp_extension.py", line 686, in unix_wrap_ninja_compile
+        _write_ninja_file_and_compile_objects(
+      File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/utils/cpp_extension.py", line 1774, in _write_ninja_file_and_compile_objects
+        _run_ninja_build(
+      File "/home/sankeerth/miniconda3/envs/gaussian_splatting_shangar/lib/python3.11/site-packages/torch/utils/cpp_extension.py", line 2116, in _run_ninja_build
+        raise RuntimeError(message) from e
+    RuntimeError: Error compiling objects for extension
+    [end of output]
+
+note: This error originates from a subprocess, and is likely not a problem with pip.
+Traceback (most recent call last):
+  File "/home/sankeerth/projects/livegs_shangar/gaussian-splatting/train.py", line 16, in <module>
+    from gaussian_renderer import render, network_gui
+  File "/home/sankeerth/projects/livegs_shangar/gaussian-splatting/gaussian_renderer/__init__.py", line 14, in <module>
+    from diff_gaussian_rasterization import GaussianRasterizationSettings, GaussianRasterizer
+ModuleNotFoundError: No module named 'diff_gaussian_rasterization'

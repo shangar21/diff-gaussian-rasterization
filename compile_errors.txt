@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/sankeerth/projects/livegs_shangar/gaussian-splatting/train.py", line 16, in <module>
+    from gaussian_renderer import render, network_gui
+  File "/home/sankeerth/projects/livegs_shangar/gaussian-splatting/gaussian_renderer/__init__.py", line 14, in <module>
+    from diff_gaussian_rasterization import GaussianRasterizationSettings, GaussianRasterizer
+  File "/home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/diff_gaussian_rasterization/__init__.py", line 15, in <module>
+    from . import _C
+ImportError: /home/sankeerth/projects/livegs_shangar/gaussian-splatting/submodules/diff-gaussian-rasterization/diff_gaussian_rasterization/_C.cpython-311-x86_64-linux-gnu.so: undefined symbol: _ZN14CudaRasterizer10Rasterizer7forwardESt8functionIFPcmEES4_S4_iiiPKN3c104HalfEiiS8_S8_S8_S8_S8_S6_S8_S8_S8_S8_S8_S6_S6_bPS6_Pib
